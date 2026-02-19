@@ -224,6 +224,11 @@ Media generation is handled by the `smi-browser` MCP server, which wraps Playwri
 
 | Tool | Purpose | When to Use |
 |------|---------|-------------|
+| `smi_init` | Initialize workspace directories + copy templates | First run, before any configuration |
+| `smi_auth` | Exchange Meta token, discover page + IG account | During setup (Step 8) or token renewal |
+| `smi_test_connection` | Verify FB/IG API connectivity and token health | After auth, or to diagnose API issues |
+| `smi_setup_status` | Check setup progress, mode, and next step | Every conversation start |
+| `smi_configure` | Set config, soul, constitution, tactics values | During setup and ongoing configuration |
 | `smi_generate_content` | Build context + prepare for media generation | First step of content creation |
 | `smi_build_generation_context` | Load three-tier context (lower-level) | When you need context without staging setup |
 | `smi_post_content` | Publish to FB + IG | When posting staged content |
@@ -232,3 +237,4 @@ Media generation is handled by the `smi-browser` MCP server, which wraps Playwri
 | `smi_update_tactics` | Update Tactics with findings | After analysis finds significant patterns |
 | `smi_propose_soul_change` | Propose Soul changes | When analysis shows strong evidence for brand-level changes |
 | `smi_review_queue` | Check pending items | To see what's queued for posting or approval |
+| `smi_get_notifications` | Get unread background events | Every conversation start and periodically during long sessions |

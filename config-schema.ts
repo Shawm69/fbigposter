@@ -76,7 +76,7 @@ export const DEFAULT_CONFIG: PluginConfig = {
     },
   },
   pipelines: {
-    reels: { enabled: true, daily_target: 1 },
+    reels: { enabled: true, daily_target: 2 },
     image_posts: { enabled: true, daily_target: 1 },
     stories: { enabled: true, daily_target: 2 },
   },
