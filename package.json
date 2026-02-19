@@ -12,35 +12,10 @@
     "start": "node dist/src/mcp-server.js"
   },
   "openclaw": {
-    "type": "plugin",
+    "extensions": ["./dist/index.js"],
     "displayName": "Social Media Influencer",
-    "description": "Autonomous social media management with three-tier learning system",
     "agentPrompt": "AGENT_PROMPT.md",
-    "tools": [
-      "smi_init",
-      "smi_auth",
-      "smi_test_connection",
-      "smi_setup_status",
-      "smi_configure",
-      "smi_build_generation_context",
-      "smi_generate_content",
-      "smi_post_content",
-      "smi_collect_metrics",
-      "smi_run_analysis",
-      "smi_update_tactics",
-      "smi_propose_soul_change",
-      "smi_review_queue",
-      "smi_get_notifications"
-    ],
-    "services": [
-      "smi-scheduler",
-      "smi-metrics-collector",
-      "smi-nightly-analysis",
-      "smi-content-generator"
-    ],
-    "skills": [
-      "social-media-influencer"
-    ]
+    "skills": ["social-media-influencer"]
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",

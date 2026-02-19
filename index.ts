@@ -21,6 +21,7 @@ import { startScheduler, stopScheduler } from "./src/services/scheduler";
 import { startMetricsCollector, stopMetricsCollector } from "./src/services/metrics-collector";
 import { startNightlyAnalysis, stopNightlyAnalysis } from "./src/services/nightly-analysis";
 import { startContentGenerator, stopContentGenerator } from "./src/services/content-generator";
+import { getUnreadEvents, getRecentEvents } from "./src/services/event-log";
 
 // Meta API
 import {
@@ -535,6 +536,26 @@ export function getTools() {
       },
       handler: generateContentTool,
     },
+    {
+      name: "smi_get_notifications",
+      description:
+        "Get unread background events (posts published, analysis results, errors). Call this periodically to stay informed about what happened while you weren't looking.",
+      parameters: {
+        type: "object",
+        properties: {
+          limit: {
+            type: "number",
+            description: "Max events to return (default: all unread)",
+          },
+        },
+      },
+      handler: (params: { limit?: number }) => {
+        const events = params.limit
+          ? getRecentEvents(params.limit)
+          : getUnreadEvents();
+        return { events, count: events.length };
+      },
+    },
   ];
 }
 
@@ -584,6 +605,32 @@ export const admin = {
    */
   rejectSoulChange: (proposalId: string) => updateProposalStatus(proposalId, "rejected"),
 };
+
+// ═══════════════════════════════════════════════
+// OpenClaw Extension Entry Point
+// ═══════════════════════════════════════════════
+
+/**
+ * Default export called by OpenClaw when loading the plugin.
+ * Registers all tools and services via the OpenClaw API.
+ */
+export default function register(api: any) {
+  const workspace =
+    api.getWorkspacePath?.() ||
+    process.env.SMI_WORKSPACE ||
+    path.join(process.cwd(), "workspace");
+  activate({}, workspace);
+
+  // Register all tools
+  for (const tool of getTools()) {
+    api.registerAgentTool(tool);
+  }
+
+  // Register background services
+  for (const service of getServices()) {
+    api.registerService({ id: service.name, start: service.start, stop: service.stop });
+  }
+}
 
 // Export everything needed
 export { ConfigSchema, DEFAULT_CONFIG } from "./config-schema";
