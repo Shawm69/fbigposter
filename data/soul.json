@@ -1,0 +1,65 @@
+{
+  "_template": true,
+  "version": 1,
+  "last_modified": "2026-02-18T00:00:00Z",
+  "brand_voice": {
+    "tone": "friendly, knowledgeable, approachable",
+    "personality_traits": ["curious", "helpful", "witty"],
+    "writing_style": "conversational but informed"
+  },
+  "audience": {
+    "primary_demographic": "18-35 year olds interested in technology",
+    "interests": ["technology", "innovation", "productivity"],
+    "pain_points": ["information overload", "staying current with trends"]
+  },
+  "content_pillars": [
+    {
+      "name": "Education",
+      "description": "Teaching audience about key topics in an accessible way",
+      "weight": 0.4
+    },
+    {
+      "name": "Entertainment",
+      "description": "Engaging, shareable content that brings joy",
+      "weight": 0.3
+    },
+    {
+      "name": "Inspiration",
+      "description": "Motivational content that sparks action",
+      "weight": 0.3
+    }
+  ],
+  "visual_identity": {
+    "color_palette": ["#4A90D9", "#50C878", "#F5F5F5", "#333333"],
+    "preferred_aesthetics": "clean, modern, bright",
+    "logo_usage": "Bottom-right corner watermark on all visual content"
+  },
+  "creative_direction": {
+    "example_prompts": [],
+    "example_captions": [],
+    "content_themes": [],
+    "negative_guidance": {
+      "visual_avoid": [],
+      "caption_avoid": [],
+      "theme_avoid": []
+    },
+    "duration_pacing": {
+      "preferred_duration_seconds": 10,
+      "pacing": "moderate pace with clear scene transitions",
+      "hook_duration_seconds": 3,
+      "structure": "hook -> main content -> call-to-action"
+    },
+    "platform_tweaks": {
+      "instagram": {
+        "feed_aesthetic": "cohesive grid with consistent color theme",
+        "story_style": "casual, behind-the-scenes, interactive",
+        "reel_style": "trending formats with original spin"
+      },
+      "facebook": {
+        "post_style": "slightly more detailed captions than Instagram",
+        "audience_difference": "broader age range, more sharing behavior"
+      }
+    }
+  },
+  "change_log": []
+}

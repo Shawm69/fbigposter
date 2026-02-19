@@ -1,0 +1,61 @@
+{
+  "name": "social-media-influencer",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin that turns any agent into a social media influencer on Facebook and Instagram",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/",
+    "test": "jest",
+    "start": "node dist/mcp-server.js"
+  },
+  "openclaw": {
+    "type": "plugin",
+    "displayName": "Social Media Influencer",
+    "description": "Autonomous social media management with three-tier learning system",
+    "agentPrompt": "AGENT_PROMPT.md",
+    "tools": [
+      "smi_init",
+      "smi_auth",
+      "smi_test_connection",
+      "smi_setup_status",
+      "smi_configure",
+      "smi_build_generation_context",
+      "smi_generate_content",
+      "smi_post_content",
+      "smi_collect_metrics",
+      "smi_run_analysis",
+      "smi_update_tactics",
+      "smi_propose_soul_change",
+      "smi_review_queue",
+      "smi_get_notifications"
+    ],
+    "services": [
+      "smi-scheduler",
+      "smi-metrics-collector",
+      "smi-nightly-analysis",
+      "smi-content-generator"
+    ],
+    "skills": [
+      "social-media-influencer"
+    ]
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "@sinclair/typebox": "^0.32.0",
+    "node-cron": "^3.0.3",
+    "uuid": "^9.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/uuid": "^9.0.7",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.3.0"
+  }
+}

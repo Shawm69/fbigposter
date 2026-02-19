@@ -1,0 +1,29 @@
+node_modules/
+dist/
+workspace/
+.env
+*.log
+
+# Secrets / runtime state
+auth/
+config.json
+queue/
+
+# Python MCP server
+mcp-browser/.venv/
+mcp-browser/__pycache__/
+mcp-browser/smi_browser.egg-info/
+__pycache__/
+
+# Debug screenshots & test output
+mcp-browser/debug_*.png
+mcp-browser/screenshot_*.png
+mcp-browser/sora_*.png
+mcp-browser/test_output/
+
+# Browser session data
+.smi-browser/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,40 @@
+{
+  "_template": true,
+  "pipeline": "image_posts",
+  "version": 1,
+  "last_updated": "2026-02-19T00:00:00Z",
+  "posting_times": {
+    "best_slots": ["10:00", "13:00", "17:00"],
+    "timezone": "America/New_York",
+    "confidence": 0.5,
+    "evidence": "Industry research (Sprout Social, Buffer 2025): 10 AM, 1 PM, 5 PM EST are peak feed engagement windows"
+  },
+  "visual_style": {
+    "current_best": "lifelike photorealistic imagery with cinematic composition, strong singular focal point, no text or overlays in generated image",
+    "color_trends": "natural warm tones, golden hour lighting, high contrast with organic color palettes",
+    "hook_style": "striking visual contrast, unusual perspective, or emotional resonance to stop the scroll — no text hooks",
+    "evidence_posts": [],
+    "ai_generation_notes": "Use camera reference terms (e.g. 'shot on Canon EOS R5, 85mm, shallow depth of field') to achieve lifelike realism. Specify natural imperfections: visible pores, worn edges, dust particles, natural asymmetry. Avoid close-up hands and multiple interacting figures. Add negative prompts: no text, no watermarks, no signs with writing. Use natural-language descriptions over keyword stacking for Grok Imagine."
+  },
+  "caption_patterns": {
+    "optimal_length": { "chars": 180, "confidence": 0.5 },
+    "cta_style": "save-for-later or question-based CTAs",
+    "emoji_usage": "3-5 emojis per caption"
+  },
+  "hashtag_strategy": {
+    "optimal_count": 5,
+    "top_performing": [],
+    "recently_tested": []
+  },
+  "content_pillar_performance": [],
+  "account_engagement_profile": {
+    "primary_strength": "engagement",
+    "engagement_rate_avg": 0,
+    "comment_rate_avg": 0,
+    "avg_watch_time_ms": 0,
+    "hook_rate_avg": 0,
+    "distribution_avg": 0,
+    "rewatch_ratio_avg": 0
+  },
+  "learnings": []
+}

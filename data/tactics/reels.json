@@ -1,0 +1,40 @@
+{
+  "_template": true,
+  "pipeline": "reels",
+  "version": 1,
+  "last_updated": "2026-02-19T00:00:00Z",
+  "posting_times": {
+    "best_slots": ["09:00", "12:00", "18:00"],
+    "timezone": "America/New_York",
+    "confidence": 0.5,
+    "evidence": "Industry research (Hootsuite, Buffer 2025): 9 AM, 12 PM, 6 PM EST are peak Reels engagement windows"
+  },
+  "visual_style": {
+    "current_best": "lifelike cinematic scenes, medium shots, one camera movement per shot, 2-3 second scene cuts, no text or overlays in generated video",
+    "color_trends": "warm natural lighting, golden hour tones, high contrast with cinematic color grading",
+    "hook_style": "visual pattern interrupt or sudden movement into frame in first 2 seconds, no text hooks — purely visual curiosity gap",
+    "evidence_posts": [],
+    "ai_generation_notes": "Generate a single ~25s video. Use medium shots to avoid uncanny close-ups. Specify one camera move per shot (dolly, pan, rack focus). Describe actions in beats. Add negative prompts: no text, no watermarks, no signs with writing. Specify ambient sounds for immersion."
+  },
+  "caption_patterns": {
+    "optimal_length": { "chars": 125, "confidence": 0.5 },
+    "cta_style": "save-for-later or question-based CTAs",
+    "emoji_usage": "2-3 relevant emojis per caption"
+  },
+  "hashtag_strategy": {
+    "optimal_count": 5,
+    "top_performing": [],
+    "recently_tested": []
+  },
+  "content_pillar_performance": [],
+  "account_engagement_profile": {
+    "primary_strength": "engagement",
+    "engagement_rate_avg": 0,
+    "comment_rate_avg": 0,
+    "avg_watch_time_ms": 0,
+    "hook_rate_avg": 0,
+    "distribution_avg": 0,
+    "rewatch_ratio_avg": 0
+  },
+  "learnings": []
+}

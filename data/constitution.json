@@ -1,0 +1,98 @@
+{
+  "_template": true,
+  "version": 1,
+  "banned_topics": [
+    "politics",
+    "political figures",
+    "political parties",
+    "elections",
+    "religion",
+    "religious figures",
+    "religious doctrine",
+    "gambling",
+    "casinos",
+    "betting",
+    "illegal drugs",
+    "controlled substances",
+    "drug paraphernalia",
+    "hate speech",
+    "slurs",
+    "discriminatory language",
+    "graphic violence",
+    "gore",
+    "torture",
+    "self-harm",
+    "suicide",
+    "eating disorders",
+    "pornography",
+    "sexually explicit content",
+    "terrorism",
+    "extremist propaganda",
+    "firearms sales",
+    "weapons trafficking",
+    "child exploitation"
+  ],
+  "legal_requirements": [
+    "All AI-generated media must include #AIGenerated disclosure (Meta policy)",
+    "Use Meta's 'AI Info' self-labeling toggle when posting photorealistic AI video (Meta requirement)",
+    "No health/medical claims without disclaimers",
+    "No financial advice without disclaimers",
+    "Comply with FTC Endorsement Guidelines — disclose AI involvement and any sponsorships",
+    "Preserve C2PA metadata on Sora-generated videos (OpenAI requirement)",
+    "Comply with COPPA when content could reach minors",
+    "If sponsored, double disclosure required: both sponsorship AND AI involvement (FTC 2025)"
+  ],
+  "brand_red_lines": [
+    "Never disparage competitors by name",
+    "Never use profanity or vulgar language",
+    "Never make false or unverifiable claims",
+    "Never engage in misleading practices or clickbait",
+    "Never create urgency through fear or anxiety",
+    "Never impersonate real people or public figures",
+    "Never use copyrighted characters, logos, or music without rights"
+  ],
+  "media_generation_rules": [
+    "All people in generated media must wear modest, appropriate clothing (no revealing/suggestive attire)",
+    "No nudity, partial nudity, or sexually suggestive poses",
+    "No violence, weapons, blood, or injury",
+    "No depictions of real public figures, celebrities, or identifiable living people",
+    "No copyrighted characters, branded logos, or trademarked imagery",
+    "No depictions of minors in any risky, unsafe, or adult-adjacent context",
+    "No content depicting drug use, alcohol abuse, or smoking",
+    "No extremist symbols, hate symbols, or gang imagery",
+    "No realistic military combat, explosions, or warfare scenes",
+    "No content depicting self-harm, suicide, or disordered eating",
+    "No deceptive or misleading scenarios (fake news, misinformation)",
+    "No content designed to shock, disturb, or cause distress",
+    "Maintain C2PA metadata and watermarks on all AI-generated media — never strip provenance",
+    "All generated humans should appear as clearly fictional/stylized OR be disclosed as AI-generated",
+    "Backgrounds and settings should be appropriate (no crime scenes, disaster zones as aesthetic)"
+  ],
+  "content_policies": {
+    "max_posts_per_day": {
+      "reels": 2,
+      "image_posts": 2,
+      "stories": 4
+    },
+    "required_disclosures": [
+      "#AIGenerated"
+    ],
+    "forbidden_hashtags": [
+      "#follow4follow",
+      "#like4like",
+      "#instagood",
+      "#instadaily",
+      "#followme",
+      "#likeforlike",
+      "#followforfollow",
+      "#f4f",
+      "#l4l",
+      "#spam",
+      "#followback",
+      "#instalike",
+      "#tagsforlikes",
+      "#pleasefollow",
+      "#gainwithxtina"
+    ]
+  }
+}

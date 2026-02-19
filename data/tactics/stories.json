@@ -1,0 +1,40 @@
+{
+  "_template": true,
+  "pipeline": "stories",
+  "version": 1,
+  "last_updated": "2026-02-19T00:00:00Z",
+  "posting_times": {
+    "best_slots": ["08:00", "12:00", "18:00", "21:00"],
+    "timezone": "America/New_York",
+    "confidence": 0.5,
+    "evidence": "Industry research (Later, RecurPost 2025): stories spread through the day catch different audience segments"
+  },
+  "visual_style": {
+    "current_best": "lifelike casual photography feel, natural indoor or outdoor lighting, slightly imperfect composition to feel authentic, no text or overlays in generated image",
+    "color_trends": "warm natural tones, slight film grain or soft overexposure for authentic phone-camera feel",
+    "hook_style": "visually striking first frame with emotional resonance or curiosity gap — no text hooks",
+    "evidence_posts": [],
+    "ai_generation_notes": "Prompt for casual phone-photo aesthetic: natural lighting, slightly off-center composition, shallow depth of field. Request subtle imperfections (film grain, warm color cast) to avoid over-polished AI look. Leave visual space for Instagram native stickers (polls, questions). Use sequential frames with consistent style for story arcs. Negative prompts: no text, no watermarks, no perfect symmetry."
+  },
+  "caption_patterns": {
+    "optimal_length": { "chars": 80, "confidence": 0.5 },
+    "cta_style": "swipe-up or interactive sticker CTAs",
+    "emoji_usage": "1-2 emojis as openers, keep it minimal"
+  },
+  "hashtag_strategy": {
+    "optimal_count": 3,
+    "top_performing": [],
+    "recently_tested": []
+  },
+  "content_pillar_performance": [],
+  "account_engagement_profile": {
+    "primary_strength": "engagement",
+    "engagement_rate_avg": 0,
+    "comment_rate_avg": 0,
+    "avg_watch_time_ms": 0,
+    "hook_rate_avg": 0,
+    "distribution_avg": 0,
+    "rewatch_ratio_avg": 0
+  },
+  "learnings": []
+}
