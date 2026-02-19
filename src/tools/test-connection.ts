@@ -46,21 +46,37 @@ export async function testConnectionTool(): Promise<TestConnectionResult> {
     };
   }
 
-  // 3. Verify Facebook access
+  // 3. Verify Facebook access — check page token directly (more reliable than /me/accounts
+  //    which requires pages_show_list permission on the user token)
   let fbConnected = false;
   let pageName: string | null = null;
   let pageId: string | null = tokens.page_id || null;
 
-  try {
-    const pagesResponse = await graphAPIGet("/me/accounts");
-    const firstPage = pagesResponse.data?.[0];
-    if (firstPage) {
-      fbConnected = true;
-      pageName = firstPage.name || null;
-      pageId = firstPage.id || pageId;
+  if (tokens.page_id) {
+    try {
+      const pageResponse = await graphAPIGet(`/${tokens.page_id}`, {
+        fields: "name,id",
+        access_token: tokens.page_access_token,
+      });
+      if (pageResponse.id) {
+        fbConnected = true;
+        pageName = pageResponse.name || null;
+        pageId = pageResponse.id;
+      }
+    } catch {
+      // Page token failed — try /me/accounts as fallback
+      try {
+        const pagesResponse = await graphAPIGet("/me/accounts");
+        const firstPage = pagesResponse.data?.[0];
+        if (firstPage) {
+          fbConnected = true;
+          pageName = firstPage.name || null;
+          pageId = firstPage.id || pageId;
+        }
+      } catch {
+        // FB access failed entirely
+      }
     }
-  } catch {
-    // FB access failed — fbConnected stays false
   }
 
   // 4. Verify Instagram access (if IG user ID is stored)
@@ -83,7 +99,7 @@ export async function testConnectionTool(): Promise<TestConnectionResult> {
   }
 
   return {
-    success: fbConnected,
+    success: fbConnected || igConnected,
     facebook: {
       connected: fbConnected,
       page_name: pageName,
