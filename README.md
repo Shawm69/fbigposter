@@ -106,7 +106,7 @@ Load `AGENT_PROMPT.md` as the system prompt. It handles everything: detecting se
 ├── config-schema.ts          # TypeScript config schema
 ├── AGENT_PROMPT.md           # Full agent system prompt
 ├── SKILL.md                  # Concise skill reference
-└── package.json              # 14 tools listed in openclaw.tools
+└── package.json              # OpenClaw extensions entry point
 ```
 
 ## Nightly Cycle
