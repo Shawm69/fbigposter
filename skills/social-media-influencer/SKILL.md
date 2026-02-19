@@ -192,7 +192,7 @@ Media generation is handled by the `smi-browser` MCP server, which wraps Playwri
 - Supports aspect ratios: 1:1 (square), 16:9 (landscape), 9:16 (portrait)
 - Generation typically takes ~10 seconds
 - Multiple images may be generated — the server picks the first result
-- If Grok returns an auth error, run `check_browser_session` and log in manually with `SMI_HEADLESS=false`
+- If Grok returns an auth error, run `check_browser_session` and log in manually in the browser window
 
 ### Sora Tips
 - Requires an active ChatGPT Plus or Pro subscription
@@ -207,18 +207,16 @@ Media generation is handled by the `smi-browser` MCP server, which wraps Playwri
 - If generation times out, the content item is skipped
 
 ### MCP Error Handling
-- `"Could not find prompt input"` → Not logged in. Run with `SMI_HEADLESS=false` to log in manually
+- `"Could not find prompt input"` → Not logged in. Log in manually in the browser window
 - `"Video generation timed out"` → Sora took too long (>15 min). Retry or skip
 - `"Could not find the three-dot menu"` → Sora UI may have changed. Check manually
 - `"Failed after N attempts"` → Persistent failure. Check browser session auth and site availability
 - All MCP tools retry 3 times automatically before returning an error
 
 ### Browser Session Setup
-1. First run: set `SMI_HEADLESS=false` environment variable
-2. The MCP server opens a visible browser window
-3. Log in to grok.com and sora.chatgpt.com manually
-4. Sessions persist in `~/.smi-browser/` across restarts
-5. Set `SMI_HEADLESS=true` (default) for autonomous operation
+1. Start the MCP browser server — it always runs with a visible browser window (Grok and Sora detect and block headless browsers)
+2. On first run, log in to grok.com and sora.chatgpt.com manually in the browser window
+3. Sessions persist in `~/.smi-browser/` across restarts — you only need to log in once
 
 ## Available Tools Reference
 

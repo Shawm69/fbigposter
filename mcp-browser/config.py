@@ -25,6 +25,7 @@ SCREENSHOT_POLL_INTERVAL_S = 3
 SORA_DRAFT_POLL_INTERVAL_S = 30
 
 # Browser settings
-HEADLESS = os.environ.get("SMI_HEADLESS", "true").lower() == "true"
+# Always run headed — Grok and Sora detect headless browsers and fail to load
+HEADLESS = False
 VIEWPORT_WIDTH = 1280
 VIEWPORT_HEIGHT = 900
